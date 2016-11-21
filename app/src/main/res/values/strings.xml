@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">reportCardJavaClass</string>
+    <string name="wrongGrade">You have entered an invalid grade.</string>
+</resources>
