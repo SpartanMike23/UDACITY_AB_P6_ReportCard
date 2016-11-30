@@ -8,12 +8,10 @@ import java.util.ArrayList;
 public class reportCard {
 
     public static void main(String[] args) {
-
         //ArrayList created to store student data, using contructor studentReportCard
         ArrayList<studentReportCard> StudentReportCards = new ArrayList<studentReportCard>();
         StudentReportCards.add(new studentReportCard("Michael", "N", "B+", 88.88, "Geometry"));
         StudentReportCards.add(new studentReportCard("Miguel", "N", "B+", 88.67, "History"));
-
 
         //Testing setters
         StudentReportCards.get(1).setFirstName("Michael");
@@ -22,20 +20,20 @@ public class reportCard {
         StudentReportCards.get(0).setGrade("B+");
         StudentReportCards.get(0).setSubject("Biology");
         StudentReportCards.get(1).setSubject("History");
+
         //Testing Getters
         StudentReportCards.get(1).getGrade();
         StudentReportCards.get(0).getGrade();
         StudentReportCards.get(1).getPercentage();
         StudentReportCards.get(0).getSubject();
+
         //Testing toString
         StudentReportCards.get(1).toString();
         StudentReportCards.get(0).toString();
-        //implementing constants
 
     }
 
 }
-
 
 class studentReportCard {
     final static String School = "Skyline HighSchool";
@@ -46,9 +44,9 @@ class studentReportCard {
     final static int year = 2010;
     String subject;
 
-
     //Constructor
-    public studentReportCard(String firstName, String lastName, String grade, double percentage, String subject) {
+    public studentReportCard(String firstName, String lastName, String grade,
+                             double percentage, String subject) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.grade = grade;
@@ -56,9 +54,7 @@ class studentReportCard {
         this.subject = subject;
     }
 
-
 //setters
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -97,13 +93,11 @@ class studentReportCard {
 
         }
 
-
     }
 
     public void setPercentage(double percentage) {
         this.percentage = percentage;
     }
-
 
     public void setSubject(String subject) {
         this.subject = subject;
@@ -136,7 +130,7 @@ class studentReportCard {
 
     //prints summary of report card
 
-    //to String method
+    //Returns Students Grade overview
     @Override
     public String toString() {
         return "studentReportCard{" +
